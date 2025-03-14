@@ -247,3 +247,8 @@ vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/sns_reg_config
+
+# Sensors
+vendor/lib64/sensors.flicker.so
+vendor/lib64/sensors.grip.so
+vendor/lib64/sensors.ssc.so
