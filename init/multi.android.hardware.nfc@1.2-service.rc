@@ -4,12 +4,11 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     user nfc
     group nfc drmrpc system
 
-service nfc_hal_service /vendor/bin/hw/sec.android.hardware.nfc-service
+service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.samsung
     disabled
     class hal
-    oneshot
     user nfc
-    group nfc net_bt_admin
+    group nfc
 
 on property:ro.boot.product.hardware.sku=sn110t
     start vendor.nfc_hal_service
