@@ -1,8 +1,8 @@
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
+service vendor.nfc_hal_service /vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
     disabled
-    class early_hal
+    class hal
     user nfc
-    group nfc drmrpc system
+    group nfc net_bt_admin
 
 service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.samsung
     disabled
