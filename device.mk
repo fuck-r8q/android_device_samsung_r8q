@@ -30,8 +30,7 @@ $(call soong_config_set,samsungCameraVars,extra_ids,52)
 # Init files
 PRODUCT_PACKAGES += \
     init.r8q.rc \
-    multi.android.hardware.nfc-service.rc \
-    multi.android.hardware.secure_element-service.rc
+    multi.android.hardware.nfc-service.rc
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -57,7 +56,7 @@ PRODUCT_COPY_FILES += \
 # Secure Element
 PRODUCT_PACKAGES += \
     android.hardware.secure_element-service.nxp \
-    android.hardware.secure_element-service.thales-sku
+    android.hardware.secure_element-service.thales
 
 # Sensors
 PRODUCT_PACKAGES += \
