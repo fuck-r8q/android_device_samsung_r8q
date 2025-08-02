@@ -257,3 +257,6 @@ vendor/etc/sensors/sns_reg_config
 vendor/lib64/sensors.flicker.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.ssc.so
+
+# Thermal
+vendor/etc/btcon.json
