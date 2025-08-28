@@ -130,6 +130,9 @@ vendor/lib64/camera/ois_mcu_stm32g_fw.bin
 vendor/etc/qdcm_calib_data_ss_dsi_panel_EA8079B_AMS646YB01_FHD.xml
 vendor/etc/qdcm_calib_data_ss_dsi_panel_S6E3FC3_AMS646YD01_FHD.xml
 
+# Feature
+vendor/etc/floating_feature.xml
+
 # Fingerprint
 vendor/lib64/libbauthserver.so
 vendor/lib64/libbauthtzcommon.so
