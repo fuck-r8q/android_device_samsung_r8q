@@ -180,9 +180,3 @@ on property:ro.boot.em.model=SM-G7810
     setprop ro.vendor.nfc.feature.chipname "SLSI"
     setprop ro.telephony.default_network "33,33"
     setprop bluetooth.device.default_name "Galaxy S20 FE 5G"
-
-on fs && property:ro.boot.product.hardware.sku=sn110t
-    mount none /vendor/etc/libnfc-nci-NXP_SN100U.conf /vendor/etc/libnfc-nci.conf bind
-
-on fs && property:ro.boot.product.hardware.sku=s3fwrn5
-    mount none /vendor/etc/libnfc-nci-SLSI.conf /vendor/etc/libnfc-nci.conf bind
