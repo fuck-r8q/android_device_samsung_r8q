@@ -1,4 +1,4 @@
-# Device-specific proprietary files - from Samsung package version G780GXXSGEYH1 (T)
+# Device-specific proprietary files - from Samsung package version G780GXXSHEYJ1 (T)
 
 # ACDB data
 vendor/etc/acdbdata/adsp_avs_config.acdb
