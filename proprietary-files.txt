@@ -197,7 +197,6 @@ vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 # NFC (SLSI)
 vendor/etc/nfc/sec_s3nrn4v_hwreg.bin
 vendor/etc/nfc/sec_s3nrn4v_swreg.bin
-vendor/lib64/nfc_nci_sec.so
 
 # NFC (firmware)
 vendor/firmware/nfc/libsn100u_fw.so
