@@ -39,7 +39,7 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_samsung_
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
-    android.hardware.nfc-service.sec \
+    android.hardware.nfc-service.sec-sku \
     com.android.nfc_extras \
     Tag
 
@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES += \
 # Secure Element
 PRODUCT_PACKAGES += \
     android.hardware.secure_element-service.nxp \
-    android.hardware.secure_element-service.thales
+    android.hardware.secure_element-service.thales-sku
 
 # Sensors
 PRODUCT_PACKAGES += \
