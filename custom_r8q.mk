@@ -1,0 +1,46 @@
+#
+# Copyright (C) 2024-2025 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+TARGET_SUPPORTS_OMX_SERVICE := false
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from r8q device
+$(call inherit-product, device/samsung/r8q/device.mk)
+
+# Inherit some common PixelOS stuff
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+
+## Device identifier. This must come after all inclusions
+PRODUCT_NAME := custom_r8q
+PRODUCT_DEVICE := r8q
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Pixel 10 Pro
+PRODUCT_MANUFACTURER := Google
+
+PRODUCT_GMS_CLIENTID_BASE := google-samsung
+
+# unapproved GMS identifiers ¯\_(ツ)_/¯
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="blazer-user 17 CP2A.260605.012 15430684 release-keys" \
+    BuildFingerprint=google/blazer/blazer:17/CP2A.260605.012/15430684:user/release-keys \
+    DeviceProduct=r8qxx \
+    SystemName=r8qxx
