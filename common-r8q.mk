@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from r8q device
 $(call inherit-product, device/samsung/r8q/device.mk)
 
+# Inherit samsung media
+$(call inherit-product-if-exists, vendor/samsung/media/media.mk)
+
 ifneq ($(TARGET_IS_PIXELOS),true)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
