@@ -45,9 +45,9 @@ else
 PRODUCT_NAME := custom_r8q
 endif
 PRODUCT_DEVICE := r8q
-PRODUCT_BRAND := google
+PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G780G
-PRODUCT_MANUFACTURER := google
+PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
