@@ -26,12 +26,14 @@ $(call inherit-product, device/samsung/r8q/device.mk)
 # Inherit samsung media
 $(call inherit-product-if-exists, vendor/samsung/media/media.mk)
 
-ifneq ($(TARGET_IS_PIXELOS),true)
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-else
+ifeq ($(TARGET_IS_PIXELOS),true)
 # Inherit some common PixelOS stuff
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
+endif
+
+ifeq ($(TARGET_IS_LINEAGEOS),true)
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 endif
 
 # Boot animation
@@ -39,11 +41,15 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-ifneq ($(TARGET_IS_PIXELOS),true)
-PRODUCT_NAME := lineage_r8q
-else
+
+ifeq ($(TARGET_IS_PIXELOS),true)
 PRODUCT_NAME := custom_r8q
 endif
+
+ifeq ($(TARGET_IS_LINEAGEOS),true)
+PRODUCT_NAME := lineage_r8q
+endif
+
 PRODUCT_DEVICE := r8q
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G780G
