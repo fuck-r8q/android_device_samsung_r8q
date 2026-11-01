@@ -15,6 +15,14 @@
 # limitations under the License.
 #
 
+## Rom identifier. This must come before all inclusions
+ifeq ($(TARGET_IS_PIXELOS),true)
+ROM := custom
+endif
+ifeq ($(TARGET_IS_LINEAGEOS),true)
+ROM := lineage
+endif
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
@@ -23,30 +31,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from r8q device
 $(call inherit-product, device/samsung/r8q/device.mk)
 
-ifeq ($(TARGET_IS_PIXELOS),true)
-# Inherit some common PixelOS stuff
-$(call inherit-product, vendor/custom/config/common_full_phone.mk)
-endif
-
-ifeq ($(TARGET_IS_LINEAGEOS),true)
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-endif
+# Inherit from rom vendor
+$(call inherit-product, vendor/$(ROM)/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-
-ifeq ($(TARGET_IS_PIXELOS),true)
-PRODUCT_NAME := custom_r8q
-endif
-
-ifeq ($(TARGET_IS_LINEAGEOS),true)
-PRODUCT_NAME := lineage_r8q
-endif
-
+PRODUCT_NAME := $(ROM)_r8q
 PRODUCT_DEVICE := r8q
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G780G
