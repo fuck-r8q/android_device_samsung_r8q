@@ -18,7 +18,6 @@ from extract_utils.main import (
 
 namespace_imports = [
     'vendor/samsung/sm8250-common',
-    'vendor/qcom/opensource/display',
 ]
 
 blob_fixups: blob_fixups_user_type = {

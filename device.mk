@@ -15,8 +15,7 @@
 #
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # call the common setup
 $(call inherit-product, device/samsung/sm8250-common/common.mk)
@@ -37,8 +36,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.multi-sku.rc \
     init.r8q.rc
-
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_samsung_r8q)
 
 # NFC
 PRODUCT_PACKAGES += \

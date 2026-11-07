@@ -95,8 +95,6 @@
          -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
 
-    <bool name="config_physicalDisplayCutout">true</bool>
-
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
 
