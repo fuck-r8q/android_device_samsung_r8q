@@ -25,6 +25,8 @@ BOARD_SUPER_PARTITION_SIZE := 10292822016
 
 include device/samsung/sm8250-common/BoardConfigCommon.mk
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
