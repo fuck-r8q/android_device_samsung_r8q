@@ -38,6 +38,7 @@ BOARD_NAME := SRPUB26A007
 TARGET_PREBUILT_KERNEL := device/samsung/r8q-kernel/Image
 TARGET_COMPILE_WITH_MSM_KERNEL := false
 TARGET_PREBUILT_DTB := device/samsung/r8q-kernel/dtb
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_PREBUILT_DTB)
 BOARD_PREBUILT_DTBOIMAGE := device/samsung/r8q-kernel/dtbo.img
 TARGET_BOARD_KERNEL_HEADERS := device/samsung/r8q-kernel/kernel-headers
 
