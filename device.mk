@@ -37,6 +37,11 @@ PRODUCT_PACKAGES += \
     android.hardware.multi-sku.rc \
     init.r8q.rc
 
+# Kernel
+KERNEL_PREBUILT_DIR := device/samsung/r8q-kernel
+PRODUCT_COPY_FILES += \
+    $(KERNEL_PREBUILT_DIR)/Image:kernel
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \

@@ -35,6 +35,10 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_samsung_r8q
 
 # Kernel
 BOARD_NAME := SRPUB26A007
+TARGET_PREBUILT_KERNEL := device/samsung/r8q-kernel/Image
+TARGET_COMPILE_WITH_MSM_KERNEL := false
+BOARD_PREBUILT_DTBIMAGE_DIR := device/samsung/r8q-kernel/dtb
+BOARD_PREBUILT_DTBOIMAGE := device/samsung/r8q-kernel/dtbo.img
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := r8q
