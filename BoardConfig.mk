@@ -40,6 +40,9 @@ BOARD_NAME := SRPUB26A007
 TARGET_OTA_ASSERT_DEVICE := r8q
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
+# PowerShare
+TARGET_POWERSHARE_NODE := /sys/class/power_supply/battery/wc_tx_en
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
